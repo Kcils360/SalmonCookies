@@ -11,8 +11,12 @@
 //     (method to calcutlate customers per hour)
 
 var firstPike = {
-  minCustsHr: ,
-  maxCustHr: ,
-  avgCookiePerCust: ,
-  
+  minCustsHr:23,
+  maxCustHr:65,
+  avgCookiePerCust:6.3,
+  cookiesPerHr: [],
+  function custPertHr(this.minCustsHr, this.maxCustHr) {
+    return Math.floor(Math.random() * (this.minCustsHr - this.maxCustHr + 1)) + this.minCustsHr;
+  }
+
 }
