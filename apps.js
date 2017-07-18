@@ -134,3 +134,44 @@ var seaCent = {
 seaCent.customersPerHour();
 seaCent.cookiesPerHour();
 seaCent.render();
+
+//Capitol Hill location
+var capHill = {
+  minCustomers: 20,
+  maxCustomers: 38,
+  avgCookiesPerSale: 2.3,
+  hourlyCookies: [],
+  customersPerHour: function(minCustomers, maxCustomers) {
+    return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers;
+  },
+  cookiesPerHour: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var cookiesPer = Math.floor(this.avgCookiesPerSale * this.customersPerHour());
+      this.hourlyCookies.push(cookiesPer);
+    }
+    return this.hourlyCookies;
+  },
+
+  cookiesPerDay: function(){
+    var total = 0;
+    for(var i = 0; i < hoursOpen.length; i++){
+      total += this.hourlyCookies[i];
+    }
+    return total;
+  },
+  render: function(){
+    var pikeUL = document.getElementById('caphill');
+    for(var i = 0; i < hoursOpen.length; i++){
+      var liEl = document.createElement('li');
+      liEl.textContent = hoursOpen[i] + ': ' + capHill.hourlyCookies[i] + ' cookies';
+      pikeUL.appendChild(liEl);
+    }
+    var total = document.getElementById('caphill');
+    liEl = document.createElement('li');
+    liEl.textContent = 'total - ' + capHill.cookiesPerDay(total);
+    total.appendChild(liEl);
+  }
+};
+capHill.customersPerHour();
+capHill.cookiesPerHour();
+capHill.render();
