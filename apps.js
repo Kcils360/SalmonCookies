@@ -9,8 +9,9 @@
 //     totalCookiesDay:  ,
 //     (methods to calculate customer and cookie totals)
 //     (method to calcutlate customers per hour)
-var hoursOpen = ['6:00am', '7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm', '5:00pm', '6:00pm', '7:00pm', '8:00pm'];
+var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+//1st and Pike Location
 var pike = {
   minCustomers: 23,
   maxCustomers: 65,
@@ -38,7 +39,7 @@ var pike = {
     var pikeUL = document.getElementById('pike');
     for(var i = 0; i < hoursOpen.length; i++){
       var liEl = document.createElement('li');
-      liEl.textContent = hoursOpen[i] + ': ' + pike.hourlyCookies[i] + ' cookies this hour';
+      liEl.textContent = hoursOpen[i] + ': ' + pike.hourlyCookies[i] + ' cookies';
       pikeUL.appendChild(liEl);
     }
     var total = document.getElementById('pike');
@@ -51,3 +52,44 @@ var pike = {
 pike.customersPerHour();
 pike.cookiesPerHour();
 pike.render();
+
+//SeaTac Location
+var seaTac = {
+  minCustomers: 23,
+  maxCustomers: 65,
+  avgCookiesPerSale: 6.3,
+  hourlyCookies: [],
+  customersPerHour: function(minCustomers, maxCustomers) {
+    return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers;
+  },
+  cookiesPerHour: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var cookiesPer = Math.floor(this.avgCookiesPerSale * this.customersPerHour());
+      this.hourlyCookies.push(cookiesPer);
+    }
+    return this.hourlyCookies;
+  },
+
+  cookiesPerDay: function(){
+    var total = 0;
+    for(var i = 0; i < hoursOpen.length; i++){
+      total += this.hourlyCookies[i];
+    }
+    return total;
+  },
+  render: function(){
+    var pikeUL = document.getElementById('seatac');
+    for(var i = 0; i < hoursOpen.length; i++){
+      var liEl = document.createElement('li');
+      liEl.textContent = hoursOpen[i] + ': ' + seaTac.hourlyCookies[i] + ' cookies';
+      pikeUL.appendChild(liEl);
+    }
+    var total = document.getElementById('seatac');
+    liEl = document.createElement('li');
+    liEl.textContent = 'total - ' + seaTac.cookiesPerDay(total);
+    total.appendChild(liEl);
+  }
+};
+seaTac.customersPerHour();
+seaTac.cookiesPerHour();
+seaTac.render();
