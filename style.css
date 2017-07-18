@@ -1,0 +1,21 @@
+body {
+  margin-left: 25px;
+}
+
+h1 {
+  font-size: 40px;
+
+}
+
+h2 {
+  font-size:35px;
+  font-family: Arial;
+  border-bottom: 2px;
+  margin: 10px, 0px;
+}
+
+li {
+  font-size: 25px;
+}
+
+/*Customer Facing Page*/

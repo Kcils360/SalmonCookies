@@ -44,7 +44,7 @@ var pikePlc = {
     }
     var total = document.getElementById('pike');
     liEl = document.createElement('li');
-    liEl.textContent = 'total - ' + pikePlc.cookiesPerDay(total);
+    liEl.textContent = 'Total - ' + pikePlc.cookiesPerDay(total);
     total.appendChild(liEl);
   }
 };
@@ -86,7 +86,7 @@ var seaTac = {
     }
     var total = document.getElementById('seatac');
     liEl = document.createElement('li');
-    liEl.textContent = 'total - ' + seaTac.cookiesPerDay(total);
+    liEl.textContent = 'Total - ' + seaTac.cookiesPerDay(total);
     total.appendChild(liEl);
   }
 };
@@ -127,7 +127,7 @@ var seaCent = {
     }
     var total = document.getElementById('seacent');
     liEl = document.createElement('li');
-    liEl.textContent = 'total - ' + seaCent.cookiesPerDay(total);
+    liEl.textContent = 'Total - ' + seaCent.cookiesPerDay(total);
     total.appendChild(liEl);
   }
 };
@@ -168,7 +168,7 @@ var capHill = {
     }
     var total = document.getElementById('caphill');
     liEl = document.createElement('li');
-    liEl.textContent = 'total - ' + capHill.cookiesPerDay(total);
+    liEl.textContent = 'Total - ' + capHill.cookiesPerDay(total);
     total.appendChild(liEl);
   }
 };
@@ -209,7 +209,7 @@ var alKai = {
     }
     var total = document.getElementById('alkai');
     liEl = document.createElement('li');
-    liEl.textContent = 'total - ' + alKai.cookiesPerDay(total);
+    liEl.textContent = 'Total - ' + alKai.cookiesPerDay(total);
     total.appendChild(liEl);
   }
 };
