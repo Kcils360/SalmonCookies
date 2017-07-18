@@ -88,7 +88,7 @@ function CookieStand(locationName, minCustomers, maxCustomers, avgCookiesPerSale
 //     total.appendChild(liEl);
 //   }
 // };
-new CookieStand('pikePlc', 23 ,65 ,6.3);
+new CookieStand('Pike Place', 23 ,65 ,6.3);
 
 // pikePlc.customersPerHour();
 // pikePlc.cookiesPerHour();
