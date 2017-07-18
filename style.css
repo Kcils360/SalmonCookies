@@ -19,3 +19,16 @@ li {
 }
 
 /*Customer Facing Page*/
+nav ul {
+  border: 2px solid blue;
+  background: transparant;
+  margin-top: 10px;
+  position: fixed;
+}
+
+.nav li {
+  display: inline;
+  padding: 5px;
+  margin-top: 5px;
+
+}
