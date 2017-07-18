@@ -55,9 +55,9 @@ pike.render();
 
 //SeaTac Location
 var seaTac = {
-  minCustomers: 23,
-  maxCustomers: 65,
-  avgCookiesPerSale: 6.3,
+  minCustomers: 3,
+  maxCustomers: 24,
+  avgCookiesPerSale: 1.2,
   hourlyCookies: [],
   customersPerHour: function(minCustomers, maxCustomers) {
     return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers;
@@ -93,3 +93,44 @@ var seaTac = {
 seaTac.customersPerHour();
 seaTac.cookiesPerHour();
 seaTac.render();
+
+//Seattle Center location
+var seaCent = {
+  minCustomers: 11,
+  maxCustomers: 38,
+  avgCookiesPerSale: 3.7,
+  hourlyCookies: [],
+  customersPerHour: function(minCustomers, maxCustomers) {
+    return Math.floor(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers;
+  },
+  cookiesPerHour: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var cookiesPer = Math.floor(this.avgCookiesPerSale * this.customersPerHour());
+      this.hourlyCookies.push(cookiesPer);
+    }
+    return this.hourlyCookies;
+  },
+
+  cookiesPerDay: function(){
+    var total = 0;
+    for(var i = 0; i < hoursOpen.length; i++){
+      total += this.hourlyCookies[i];
+    }
+    return total;
+  },
+  render: function(){
+    var pikeUL = document.getElementById('seacent');
+    for(var i = 0; i < hoursOpen.length; i++){
+      var liEl = document.createElement('li');
+      liEl.textContent = hoursOpen[i] + ': ' + seaCent.hourlyCookies[i] + ' cookies';
+      pikeUL.appendChild(liEl);
+    }
+    var total = document.getElementById('seacent');
+    liEl = document.createElement('li');
+    liEl.textContent = 'total - ' + seaCent.cookiesPerDay(total);
+    total.appendChild(liEl);
+  }
+};
+seaCent.customersPerHour();
+seaCent.cookiesPerHour();
+seaCent.render();
