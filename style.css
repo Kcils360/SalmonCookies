@@ -2,20 +2,43 @@ body {
   margin-left: 25px;
 }
 
-h1 {
+caption {
   font-size: 40px;
 
 }
 
-h2 {
-  font-size:35px;
-  font-family: Arial;
-  border-bottom: 2px;
-  margin: 10px, 0px;
+tr:nth-child(even) {
+    background-color: #fff1ef;
 }
 
-li {
-  font-size: 25px;
+
+th {
+  font-size:30px;
+  font-family: Arial;
+  border-bottom: 2px solid black;
+  text-align: center;
+
+}
+
+td {
+  font-size: 23px;
+  text-align: center;
+  border-left: 1px solid black;
+  font-family: 'Space Mono', monospace;
+
 }
 
 /*Customer Facing Page*/
+nav ul {
+  border: 2px solid blue;
+  background: transparant;
+  margin-top: 10px;
+  position: fixed;
+}
+
+.nav li {
+  display: inline;
+  padding: 5px;
+  margin-top: 5px;
+
+}
