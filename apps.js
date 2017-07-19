@@ -71,7 +71,7 @@ function makeHeaderRow(){
   };
 
   var thEl = document.createElement('th');
-  thEl.textContent = 'Daily Totals';
+  thEl.textContent = 'Totals';
   trEl.appendChild(thEl);
 
 

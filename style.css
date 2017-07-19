@@ -2,20 +2,30 @@ body {
   margin-left: 25px;
 }
 
-h1 {
+caption {
   font-size: 40px;
 
 }
 
+tr:nth-child(even) {
+    background-color: #fff1ef;
+}
+
+
 th {
   font-size:30px;
   font-family: Arial;
-  border-bottom: 2px;
-  margin: 10px, 0px;
+  border-bottom: 2px solid black;
+  text-align: center;
+
 }
 
 td {
-  font-size: 25px;
+  font-size: 23px;
+  text-align: center;
+  border-left: 1px solid black;
+  font-family: 'Space Mono', monospace;
+
 }
 
 /*Customer Facing Page*/
