@@ -8,7 +8,7 @@ caption {
 }
 
 tr:nth-child(even) {
-    background-color: #fff1ef;
+    background-color: #fca380;
 }
 
 
@@ -34,6 +34,7 @@ nav ul {
   background: transparant;
   margin-top: 10px;
   position: fixed;
+  list-style-type: none;
 }
 
 .nav li {
