@@ -36,11 +36,11 @@ function StoreByLocation(locationName, minCustomers, maxCustomers, avgCookiesPer
     trEl.appendChild(tdEl);
 
     for(var i = 0; i < hoursOpen.length; i++){
-      var tdEl = document.createElement('td');
+      tdEl = document.createElement('td');
       tdEl.textContent = this.cookiesSoldEachHour[i];
       trEl.appendChild(tdEl);
     }
-    var tdEl = document.createElement('td');
+    tdEl = document.createElement('td');
     tdEl.textContent = this.totalCookiesPerDay;
     trEl.appendChild(tdEl);
 

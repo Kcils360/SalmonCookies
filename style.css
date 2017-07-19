@@ -29,6 +29,14 @@ td {
 }
 
 /*Customer Facing Page*/
+header {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/63/f8/13/63f813768b195376d46c9398949c995d.png");
+  height: 900px;
+}
+.header {
+  margin-top: 30px;
+}
+
 nav ul {
   border: 2px solid blue;
   background: transparant;
