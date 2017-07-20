@@ -3,11 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>SC projected sales</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="salesStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   </head>
   <body>
     <h1>Hourly Sales Totals Per Location</h1>
+
+    <form id="addLocation">
+      <fieldset>
+        <legend>Add new location</legend>
+        <h2 class="h2">Please fill in location Name, minimum and maximum customers per day, and average cookies sold per customer.<h2>
+        <label for="location">Location: </label>
+        <input name="location" type="text" />
+
+        <label for="minimum">Minimum: </label>
+        <input name="minimum" type="text" />
+
+        <label for="maximum">Maximum: </label>
+        <input name="maximum" type="text" />
+
+        <label for="average">Average: </label>
+        <input name="average" type="text" />
+
+        <button type="submit">Create New Location</button>
+
+      </fieldset>
+    </form>
+
     <table id="salesTable"></table>
 
     <script src="apps.js"></script>

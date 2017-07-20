@@ -1,39 +1,17 @@
-body {
-  margin-left: 25px;
+header {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/63/f8/13/63f813768b195376d46c9398949c995d.png");
+  height: 900px;
+}
+.header {
+  margin-top: 30px;
 }
 
-caption {
-  font-size: 40px;
-
-}
-
-tr:nth-child(even) {
-    background-color: #fff1ef;
-}
-
-
-th {
-  font-size:30px;
-  font-family: Arial;
-  border-bottom: 2px solid black;
-  text-align: center;
-
-}
-
-td {
-  font-size: 23px;
-  text-align: center;
-  border-left: 1px solid black;
-  font-family: 'Space Mono', monospace;
-
-}
-
-/*Customer Facing Page*/
 nav ul {
   border: 2px solid blue;
   background: transparant;
   margin-top: 10px;
   position: fixed;
+  list-style-type: none;
 }
 
 .nav li {
