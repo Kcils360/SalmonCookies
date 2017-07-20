@@ -12,7 +12,6 @@ var StoreByLocation = function(locationName, minCustomers, maxCustomers, avgCook
   this.maxCustomers = maxCustomers;
   this.avgCookiesPerSale = avgCookiesPerSale,
   this.customersPerHour = [];
-  allStores.push(this);
   this.calcCustomersPerHour = function(){
 
     for(var i = 0; i < hoursOpen.length; i++){
@@ -28,7 +27,7 @@ var StoreByLocation = function(locationName, minCustomers, maxCustomers, avgCook
     }
   };
   this.totalCookiesPerDay = 0;
-  // allStores.push(this);
+  allStores.push(this);
 };
 //+++++++++++++++++++++++++++++++END OF CONSTRUCTOR++++++++++++++++++++++++++++
 
@@ -83,8 +82,6 @@ new StoreByLocation('SeaTac Airport', 3, 24, 1.2);
 new StoreByLocation('Seattle Center', 11, 38, 3.7);
 new StoreByLocation('Capitol Hill', 20, 38, 2.3);
 new StoreByLocation('Alkai', 2, 16, 4.6);
-
-//+++++++++++++++++++LETS USE OUR FORM INFO+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 function handleNewLocationSubmit(event) {
