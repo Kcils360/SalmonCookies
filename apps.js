@@ -84,6 +84,8 @@ new StoreByLocation('Seattle Center', 11, 38, 3.7);
 new StoreByLocation('Capitol Hill', 20, 38, 2.3);
 new StoreByLocation('Alkai', 2, 16, 4.6);
 
+makeHeaderRow();
+cookiesPerHourRows();
 //+++++++++++++++++++LETS USE OUR FORM INFO+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -98,15 +100,14 @@ function handleNewLocationSubmit(event) {
   var formAvarage = event.target.average.value;
 
   var newLocationAddition = new StoreByLocation(formLocation, formMinimum, formMaximum, formAvarage);
-    event.target.location.value = null;
-    event.target.minimum.value = null;
-    event.target.maximum.value = null;
-    event.target.average.value = null;
-
+    // event.target.location.value = null;
+    // event.target.minimum.value = null;
+    // event.target.maximum.value = null;
+    // event.target.average.value = null;
+  allStores = [];
   allStores.push(newLocationAddition);
-  newLocationAddition.render();
+  cookiesPerHourRows(allStores[0]);
+
 };
-makeHeaderRow();
-cookiesPerHourRows();
 
 newFormElement.addEventListener('submit', handleNewLocationSubmit);
