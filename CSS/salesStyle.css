@@ -1,0 +1,82 @@
+html {
+  background-color: #f0ead6;
+}
+
+body {
+  margin-left: 25px;
+}
+
+caption {
+  font-size: 40px;
+
+}
+table {
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
+tr {
+}
+
+tr:nth-child(even) {
+    background-color: #fca380;
+}
+
+
+th {
+  font-size:30px;
+  font-family: Arial;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+td {
+  font-size: 23px;
+  text-align: center;
+  border-left: 1px solid black;
+  font-family: 'Space Mono', monospace;
+
+}
+
+form {
+  border: 5px double grey;
+  border-radius: 15px;
+  width: 1300px;
+  margin-bottom: 75px;
+}
+
+fieldset {
+  border: none;
+}
+
+.h2 {
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 15px;
+}
+
+legend {
+  font-style: italic;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+label {
+  font-style: none;
+  font-family: Arial;
+  margin-left: 20px;
+}
+
+input {
+  border: 2px solid grey;
+  border-radius: 5px;
+  background-color: #cccccc;
+  font-size: 18px;
+  resize: horizontal;
+  width: 110px;
+}
+
+button {
+  background-color: #fca380;
+  margin-left: 50px;
+}
