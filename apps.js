@@ -52,11 +52,17 @@ StoreByLocation.prototype.render = function() {
   salesTable.appendChild(trEl);
 };
 
-function makeHeaderRow(){
+function cookiesPerHourRows(){   //+++++++++++++++++++++++
+  for(var i = 0; i < allStores.length; i++){  // this fxn makes the data table
+    allStores[i].render();
+  }
+};    //++++++++++++++++++++++++++++++++++++++++++++++++++
+
+function makeHeaderRow(){  //++++++++++++++++++++++++++++++
   var trEl = document.createElement('tr');
 
   var thEl = document.createElement('th');
-  thEl.textContent = 'Location';
+  thEl.textContent = 'Location';              //this fxn makes the header
   trEl.appendChild(thEl);
 
   for(var i = 0; i < hoursOpen.length; i++){
@@ -70,43 +76,41 @@ function makeHeaderRow(){
   trEl.appendChild(thEl);
 
   salesTable.appendChild(trEl);
-//this is for the store rows
-};
+};           //+++++++++++++++++++++++++++++++++++++++++++
 
-function cookiesPerHourRows(){
-  for(var i = 0; i < allStores.length; i++){
-    allStores[i].render();
-  }
-};
 new StoreByLocation('Pike Place', 23, 65, 6.3);
 new StoreByLocation('SeaTac Airport', 3, 24, 1.2);
 new StoreByLocation('Seattle Center', 11, 38, 3.7);
 new StoreByLocation('Capitol Hill', 20, 38, 2.3);
 new StoreByLocation('Alkai', 2, 16, 4.6);
 
-makeHeaderRow();
-cookiesPerHourRows();
+makeHeaderRow();      //++++
+cookiesPerHourRows(); //+++++ calls fxns
+
 //+++++++++++++++++++LETS USE OUR FORM INFO+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 function handleNewLocationSubmit(event) {
   event.preventDefault();
-  // if (!event.target.location.value || !event.target.minimum.value || !event.target.maximum.value || !event.target.average.value) {
+  // if (!event.target.location.value || !event.target.minimum.value || !event.target.maximum.value || !event.target.average.value === null) {
   //   return alert('Please fill in all fields!');
   // }
   var formLocation = event.target.location.value;
-  var formMinimum = event.target.minimum.value;
-  var formMaximum = event.target.minimum.value;
-  var formAvarage = event.target.average.value;
+  var formMinimum = parseInt(event.target.minimum.value);
+  var formMaximum = parseInt(event.target.minimum.value);
+  var formAvarage = parseInt(event.target.average.value);
 
   var newLocationAddition = new StoreByLocation(formLocation, formMinimum, formMaximum, formAvarage);
     // event.target.location.value = null;
     // event.target.minimum.value = null;
     // event.target.maximum.value = null;
     // event.target.average.value = null;
-  allStores = [];
+
   allStores.push(newLocationAddition);
-  cookiesPerHourRows(allStores[0]);
+
+  salesTable.innerHTML = '';
+
+  cookiesPerHourRows();
 
 };
 
