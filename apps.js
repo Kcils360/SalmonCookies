@@ -12,7 +12,7 @@ var StoreByLocation = function(locationName, minCustomers, maxCustomers, avgCook
   this.maxCustomers = maxCustomers;
   this.avgCookiesPerSale = avgCookiesPerSale,
   this.customersPerHour = [];
-  allStores.push(this);
+  // allStores.push(this);
   this.calcCustomersPerHour = function(){
 
     for(var i = 0; i < hoursOpen.length; i++){
@@ -28,7 +28,7 @@ var StoreByLocation = function(locationName, minCustomers, maxCustomers, avgCook
     }
   };
   this.totalCookiesPerDay = 0;
-  // allStores.push(this);
+  allStores.push(this);
 };
 //+++++++++++++++++++++++++++++++END OF CONSTRUCTOR++++++++++++++++++++++++++++
 
