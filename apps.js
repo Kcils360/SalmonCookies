@@ -4,6 +4,7 @@ var hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm
 var cookiesTable = document.getElementById('salesTable');
 var newFormElement = document.getElementById('addLocation');
 var allStores = [];
+var dailyTotals = [];
 
 //+++++++++++++++++++++++++++++++++++++CONSTRUCTOR+++++++++++++++++++++++++++++++++++++++++++
 var StoreByLocation = function(locationName, minCustomers, maxCustomers, avgCookiesPerSale) {
@@ -51,6 +52,12 @@ StoreByLocation.prototype.render = function() {
   salesTable.appendChild(trEl);
 };
 
+function calcDailyTotals() {
+  
+}
+
+
+
 function makeHeaderRow(){
   var trEl = document.createElement('tr');
 
@@ -72,11 +79,36 @@ function makeHeaderRow(){
 //this is for the store rows
 };
 
+function makeFooterRow(){
+  var trEl = document.createElement('tr');
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Store Totals Per Hour';
+  trEl.appendChild(thEl);
+
+  for(var i = 0; i < dailyTotals.length; i++){
+    thEl = document.createElement('th');
+    thEl.textContent = dailyTotals[i];
+    trEl.appendChild(thEl);
+  };
+
+}
+
+
 function cookiesPerHourRows(){
   for(var i = 0; i < allStores.length; i++){
     allStores[i].render();
   }
 };
+
+
+
+
+
+
+
+
+
+
 new StoreByLocation('Pike Place', 23, 65, 6.3);
 new StoreByLocation('SeaTac Airport', 3, 24, 1.2);
 new StoreByLocation('Seattle Center', 11, 38, 3.7);
@@ -84,6 +116,10 @@ new StoreByLocation('Capitol Hill', 20, 38, 2.3);
 new StoreByLocation('Alkai', 2, 16, 4.6);
 
 
+
+
+
+//-------------------------------BUTTON EVENT-----------------------------
 function handleNewLocationSubmit(event) {
   event.preventDefault();
   if (!event.target.location.value || !event.target.minimum.value || !event.target.maximum.value || !event.target.average.value === null) {
@@ -105,5 +141,5 @@ function handleNewLocationSubmit(event) {
 };
 makeHeaderRow();
 cookiesPerHourRows();
-makeFooterRow();
+// makeFooterRow();
 newFormElement.addEventListener('submit', handleNewLocationSubmit);
