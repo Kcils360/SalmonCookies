@@ -1,5 +1,5 @@
 html {
-  background-color: #f0ead6;
+  background-color: #FFDCCE;
 }
 
 body {
@@ -8,40 +8,12 @@ body {
 
 caption {
   font-size: 40px;
-
-}
-table {
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-}
-
-tr {
-}
-
-tr:nth-child(even) {
-    background-color: #fca380;
-}
-
-
-th {
-  font-size:30px;
-  font-family: Arial;
-  border-bottom: 2px solid black;
-  text-align: center;
-}
-
-td {
-  font-size: 23px;
-  text-align: center;
-  border-left: 1px solid black;
-  font-family: 'Space Mono', monospace;
-
 }
 
 form {
   border: 5px double grey;
   border-radius: 15px;
-  width: 1300px;
+  width: 80%;
   margin-bottom: 75px;
 }
 
@@ -79,4 +51,41 @@ input {
 button {
   background-color: #fca380;
   margin-left: 50px;
+}
+
+table {
+  border-bottom: 2px solid black;
+  border-collapse: collapse;
+
+}
+
+
+tr:nth-child(even) {
+  background-color: #fca380;
+}
+
+
+th {
+  font-size:30px;
+  font-family: Arial;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+td {
+  font-size: 23px;
+  text-align: center;
+  border-left: 1px solid black;
+  font-family: 'Space Mono', monospace;
+  color: #442c22;
+}
+
+td:first-child {
+  background-color: #442c22;
+  font-family: Arial;
+  color: #fca380;
+  padding: 3px;
+}
+td:last-child {
+  border-right: 2px solid black;
 }

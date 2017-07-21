@@ -21,7 +21,9 @@ header section {
 }
 
 header img {
-  /*border: 2px dotted red;*/
+  border: 2px dotted red;
+  height: 50px;
+  width: 50px;
 }
 
 nav ul {
