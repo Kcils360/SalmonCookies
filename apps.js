@@ -105,5 +105,5 @@ function handleNewLocationSubmit(event) {
 };
 makeHeaderRow();
 cookiesPerHourRows();
-
+makeFooterRow();
 newFormElement.addEventListener('submit', handleNewLocationSubmit);
