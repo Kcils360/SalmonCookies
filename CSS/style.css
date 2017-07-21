@@ -78,5 +78,20 @@ section img {
 }
 
 .reviews li {
+  background-image: url("http://via.placeholder.com/300x375");
+  height: 375px;
+  width: 300px;
   border: 2px dotted red;
+  display: inline;
+  margin: 10px 6%;
+  float: left;
+}
+
+footer {
+  margin: auto;
+  width: 900px;
+}
+
+.footer ul {
+  display: inline;
 }
