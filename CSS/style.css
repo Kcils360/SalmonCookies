@@ -3,15 +3,24 @@ body {
 }
 
 header {
-  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/63/f8/13/63f813768b195376d46c9398949c995d.png");
+  background-image: url('/Resources/cookieFish.png');
   height: 900px;
   position: relative;
 }
 
-/*.header {
+.header {
+  font-family: 'Bellefair', serif;
   font-size: 50px;
   text-align: center;
-}*/
+}
+
+header section {
+  border: 2px, dotted, red;
+}
+
+header img {
+  border: 2px dotted red;
+}
 
 nav ul {
   border: 2px solid grey;
@@ -33,21 +42,41 @@ nav img {
   height: 40px;
 }
 
-header section {
-  border: 2px, dotted, red;
+
+section {
+  border: 2px dotted red;
 }
 
-header img {
-  border: 2px, dotted, red;
+section img {
+  border: 2px dotted red;
 }
 
 .aboutUs {
-  border: 2px, dotted, red;
+  border: 2px dotted red;
+}
+.aboutUs p {
+  border: 2px dotted red;
+}
+.aboutUs h3 {
+  border: 2px dotted red;
+}
+
+.sources {
+  border: 2px dotted red;
 }
 
 .findUs {
-  border: 2px, dotted, red;
+  border: 2px dotted red;
 }
-.likeUs {
-  border: 2px, dotted, red;
+
+.findUs li {
+  border: 2px dotted red;
+}
+
+.likedUs {
+  border: 2px dotted red;
+}
+
+.reviews li {
+  border: 2px dotted red;
 }
