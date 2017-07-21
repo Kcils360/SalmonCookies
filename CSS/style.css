@@ -1,14 +1,22 @@
+body {
+  margin: 0px;
+}
+
 header {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/63/f8/13/63f813768b195376d46c9398949c995d.png");
   height: 900px;
-}
-.header {
-  margin-top: 30px;
+  position: relative;
 }
 
+/*.header {
+  font-size: 50px;
+  text-align: center;
+}*/
+
 nav ul {
-  border: 2px solid blue;
-  background: transparant;
+  border: 2px solid grey;
+  border-radius: 15px;
+  background: 0,0,0,0;
   margin-top: 10px;
   position: fixed;
   list-style-type: none;
@@ -23,4 +31,23 @@ nav li {
 
 nav img {
   height: 40px;
+}
+
+header section {
+  border: 2px, dotted, red;
+}
+
+header img {
+  border: 2px, dotted, red;
+}
+
+.aboutUs {
+  border: 2px, dotted, red;
+}
+
+.findUs {
+  border: 2px, dotted, red;
+}
+.likeUs {
+  border: 2px, dotted, red;
 }
