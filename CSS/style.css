@@ -3,9 +3,11 @@ body {
 }
 
 header {
-  background-image: url('/Resources/cookieFish.png');
+  /*background-color: blue;*/
+  background-image: url('Resourses/gookieFish.jpg');
   height: 900px;
-  position: relative;
+  width: 1020px;
+  /*position: relative;*/
 }
 
 .header {
@@ -20,6 +22,8 @@ header section {
 
 header img {
   border: 2px dotted red;
+  height: 50px;
+  width: 50px;
 }
 
 nav ul {
@@ -27,6 +31,7 @@ nav ul {
   border-radius: 15px;
   background: 0,0,0,0;
   margin-top: 10px;
+  margin-left:  65%;
   position: fixed;
   list-style-type: none;
 }
@@ -78,5 +83,20 @@ section img {
 }
 
 .reviews li {
+  background-image: url("http://via.placeholder.com/300x375");
+  height: 375px;
+  width: 300px;
   border: 2px dotted red;
+  display: inline;
+  margin: 10px 6%;
+  float: left;
+}
+
+footer {
+  margin: auto;
+  width: 900px;
+}
+
+.footer ul {
+  display: inline;
 }
