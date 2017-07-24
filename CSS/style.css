@@ -4,7 +4,7 @@ body {
 
 header {
   /*background-color: blue;*/
-  background-image: url('Resourses/gookieFish.jpg');
+  background-image: url("/home/gregory/codefellows/201/SalmonCookies/Resources/cookieFish.jpg");
   height: 900px;
   width: 1020px;
   /*position: relative;*/
