@@ -53,15 +53,24 @@ nav img {
 }
 
 .aboutUs {
-  border: 2px dotted red;
-}
-.aboutUs img {
-  height: 190px;
-}
-.aboutUs p {
+  position: relative;
   border: 2px dotted red;
 }
 .aboutUs h3 {
+  font-size: 40px;
+  text-align: center;
+  font-family: Helvetica;
+  color: #fca380;
+  float: right;
+  margin-top: 90px;
+  margin-right: 360px;
+}
+.aboutUs img {
+  height: 190px;
+  margin-left: 420px;
+  margin-top: 0px;
+}
+.aboutUs p {
   border: 2px dotted red;
 }
 
