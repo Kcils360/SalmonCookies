@@ -5,8 +5,11 @@ body {
 header {
   /*background-color: blue;*/
   background-image: url("/home/gregory/codefellows/201/SalmonCookies/Resources/cookieFish.jpg");
-  height: 900px;
-  width: 1020px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1280px;
+  height: 960px;
+  margin: 0px auto;
   /*position: relative;*/
 }
 
@@ -14,16 +17,18 @@ header {
   font-family: 'Bellefair', serif;
   font-size: 50px;
   text-align: center;
+  margin-top: 15%;
+  margin-left: 270px;
+  position: absolute;
 }
 
 header section {
-  border: 2px, dotted, red;
-}
-
-header img {
-  border: 2px dotted red;
-  height: 50px;
-  width: 50px;
+  position: absolute;
+  margin-top: 800px;
+  margin-left: 380px;
+  font-family: 'Bellefair', serif;
+  text-align: center;
+  color: #fca380;
 }
 
 nav ul {
@@ -47,17 +52,11 @@ nav img {
   height: 40px;
 }
 
-
-section {
-  border: 2px dotted red;
-}
-
-section img {
-  border: 2px dotted red;
-}
-
 .aboutUs {
   border: 2px dotted red;
+}
+.aboutUs img {
+  height: 190px;
 }
 .aboutUs p {
   border: 2px dotted red;
