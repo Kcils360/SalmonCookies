@@ -1,0 +1,38 @@
+html {
+  background-color: #FFDCCE;
+}
+
+h1 {
+  margin-left: 100px;
+}
+
+a {
+  font-size: 20px;
+  margin-left: 85%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.images {
+  width: 90%;
+  text-align: center;
+}
+
+.images ul li {
+  display: inline-block;
+  width: 400px;
+  margin: 0px 15px;
+}
+
+.description {
+  width: 90%;
+  text-align: center;
+}
+
+.description ul li {
+  display: inline-block;
+  width: 400px;
+  margin: 0px 15px;
+}

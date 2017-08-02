@@ -1,12 +1,21 @@
+html {
+  background-color: #FFDCCE;
+}
+
+
 body {
   margin: 0px;
 }
 
 header {
-  /*background-color: blue;*/
-  background-image: url("/home/gregory/codefellows/201/SalmonCookies/Resources/cookieFish.jpg");
+  background-color: black;
+  background-image: url("../Resources/cookieFish.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 900px;
-  width: 1020px;
+  width: 90%;
+  margin: 0 auto;
   /*position: relative;*/
 }
 
@@ -53,7 +62,7 @@ section {
 }
 
 section img {
-  border: 2px dotted red;
+  /*border: 2px dotted red;*/
 }
 
 .aboutUs {
@@ -72,24 +81,39 @@ section img {
 
 .findUs {
   border: 2px dotted red;
+  text-align: center;
 }
 
 .findUs li {
   border: 2px dotted red;
+  display: inline;
+  margin: 0px 40px;
 }
 
 .likedUs {
-  border: 2px dotted red;
+  /*border: 2px dotted red;*/
 }
 
+
 .reviews li {
-  background-image: url("http://via.placeholder.com/300x375");
-  height: 375px;
-  width: 300px;
-  border: 2px dotted red;
+  /*background-image: url("http://via.placeholder.com/300x375");*/
+  height: 187px;
+  width: 310px;
+  border: 2px solid grey;
+  border-radius: 10px;
   display: inline;
   margin: 10px 6%;
   float: left;
+}
+
+.reviews li p {
+  margin-top: 90px;
+  color: #442c22;
+}
+
+.one {
+  background-image: url("../Resources/family.jpg");
+  background-size: contain;
 }
 
 footer {
@@ -97,6 +121,6 @@ footer {
   width: 900px;
 }
 
-.footer ul {
+.footer {
   display: inline;
 }
